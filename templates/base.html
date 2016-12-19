@@ -3,12 +3,56 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<title>{% block title %}Caption - Downloading subtitles made easy.{% endblock %}</title>
+
+	<!-- Search engines -->
+	<link rel="canonical" href="http://getcaption.co/index.html">
+	<meta name="description" content="An open source app that makes downloading subtitles distration free.">
+	<meta name="keywords" content="Subtitle tool, subtitles, interaction design, interaction, javascript, animation, macOS, online">
+
+	<!-- Mobile viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!-- Touch Icons -->
+	<link rel="apple-touch-icon" href="/assets/static/images/touchicons/76.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/static/images/touchicons/76.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/static/images/touchicons/120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/static/images/touchicons/152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/static/images/touchicons/180.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="/assets/static/images/touchicons/192.png">
+
+	<!-- Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="/assets/static/images/touchicons/192.png">
+
+	<!-- Chrome -->
 	<link rel="shortcut icon" href="/assets/static/images/favicon.ico">
+	<link rel="shortcut icon" sizes="16x16" href="/assets/static/images/favicon.png">
+	<link rel="shortcut icon" sizes="32x32" href="/assets/static/images/favicon@2x.png">
+
+	<!-- Styling -->
 	<link rel="stylesheet" href="/assets/css/style.css">
 
-	<title>{% block title %}Caption{% endblock %}</title>
+	<!-- Facebook -->
+	<meta property="og:url" content="http://getcaption.co/">
+	<meta property="og:title" content="Subtitle app for Mac">
+	<meta property="og:description" content="An open source app that makes downloading subtitles distration free.">
+	<meta property="og:image" content="http://getcaption.co/assets/static/images/social/social.png">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="photo">
+	<meta name="twitter:site" content="@gielcobben">
+	<meta name="twitter:creator" content="@gielcobben">
+	<meta name="twitter:title" content="Subtitle app for Mac">
+	<meta name="twitter:description" content="An open source app that makes downloading subtitles distration free." />
+	<meta name="twitter:image:src" content="http://getcaption.co/assets/static/images/social/social.png">
+	<meta name="twitter:domain" content="http://getcaption.co/">
+
+	<!-- Microdata -->
+	<meta itemprop="name" content="Subtitle app for Mac">
+	<meta itemprop="description" content="An open source app that makes downloading subtitles distration free.">
+	<meta itemprop="image" content="http://getcaption.co/assets/static/images/social/social.png">
 
 	{% block header %}
 	{% endblock %}
@@ -23,5 +67,16 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="/assets/scripts/main.js"></script>
 	{% endblock %}
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-89238300-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-    "name": "Caption Website",
+    "name": "caption-website",
     "version": "1.0.0",
     "description": "Website for Caption app",
     "main": "index.js",
