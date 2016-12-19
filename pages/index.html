@@ -2,13 +2,18 @@
 {% block content %}
 
 <main id="wrapper">
-	<section class="half app">
-		<div class="inner">
-			<div class="img"></div>
+	<header>
+		Caption is made with love by <a href="https://twitter.com/gielcobben">@gielcobben</a>.
+		<div class="social">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Caption is a free and open source app where you can download subtitles. http://getcaption.co/ by @gielcobben" data-url="false" data-show-count="false">Tweet</a>
+			<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgetcaption.co%2F&width=450&layout=standard&action=like&size=small&show_faces=false&share=true&height=35" scrolling="no" frameborder="0" allowTransparency="true" class="facebook"></iframe>
 		</div>
-	</section>
-	<section class="half">
-		<div class="inner">
+	</header>
+	<div class="content">
+		<section class="half app">
+			<div class="img"></div>
+		</section>
+		<section class="half">
 			<h1>Caption</h1>
 			<p>Downloading subtitles made easy.</p>
 			<ul>
@@ -22,8 +27,8 @@
 				<a href="https://github.com/gielcobben/Caption/releases" target="_blank" class="button"> Download Caption</a>
 				<!-- <small>macOS 10.10 or above required.</small> -->
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </main>
 
 {% endblock %}

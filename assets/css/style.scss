@@ -29,6 +29,8 @@ p {
 }
 
 a {
+	font-weight: 400;
+	color: #fff;
 	text-decoration: none;
 	transition: all .2s ease;
 
@@ -58,32 +60,27 @@ li {
 }
 
 #wrapper {
+	position: relative;
 	margin: 0 auto;
 	width: 100vw;
 	height: 100vh;
-	max-width: 1000px;
+	max-width: 900px;
 }
 
-.half {
-	position: relative;
-	width: 50%;
-	height: 100%;
-	float: left;
-	text-align: center;
-
-	&.app {
-		.inner {
-			transform: translateY(-45%);
-		}
-	}
-}
-
-.inner {
+header {
 	position: absolute;
-	top: 50%;
-	left: 0;
+	padding: 32px 0;
 	width: 100%;
-	transform: translateY(-50%);
+	font-weight: 300;
+	border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
 }
 
 .download {
@@ -98,8 +95,21 @@ li {
 }
 
 .img {
-	width: 483px;
-	height: 560px;
+	width: 365px;
+	height: 422px;
 	background: url('/assets/static/images/app@2x.png');
-	background-size: 483px 560px;
+	background-size: 365px 422px;
+	margin: 0 auto;
+	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .5);
+}
+
+.social {
+	float: right;
+}
+
+.facebook {
+	border:none;
+	overflow:hidden;
+	width: 96px;
+	height: 20px;
 }
