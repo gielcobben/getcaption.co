@@ -1,7 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:100,300,400";
 @import "components/reset.scss";
-
 @import "../sprites/features.scss";
+@import "../sprites/dock.scss";
+
 @include sprites($spritesheet-sprites);
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @include retina-sprites($retina-groups); }
 
@@ -107,9 +108,64 @@ header {
 	float: right;
 }
 
-.facebook {
-	border:none;
-	overflow:hidden;
-	width: 96px;
-	height: 20px;
+.fb-like.fb_iframe_widget span {
+	vertical-align: initial !important;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, -30px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.dock {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	background: rgba(255, 255, 255, .1);
+	border-radius: 6px 6px 0 0;
+	transform: translate3d(-50%, 0, 0);
+	transition: transform .2s ease-out;
+
+	&.hide {
+		transform: translate3d(-50%, 100%, 0);
+	}
+
+	ul {
+		display: block;
+		padding: 5px;
+		margin: 0;
+
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 5px;
+			margin-bottom: 10px;
+
+			span {
+				position: absolute;
+				left: 50%;
+				bottom: -8px;
+				display: block;
+				width: 4px;
+				height: 4px;
+				border-radius: 4px;
+				background: rgba(255, 255, 255, .5);
+				margin-left: -2px;
+			}
+		}
+
+		.icon-caption {
+			&.animate {
+				animation: bounce 1s 2;
+			}
+		}
+	}
 }
