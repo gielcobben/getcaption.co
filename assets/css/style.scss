@@ -1,8 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:100,300,400";
 @import "components/reset.scss";
-@import "../sprites/features.scss";
-@import "../sprites/dock.scss";
 
+// Features sprite
+@import "../sprites/features.scss";
+@include sprites($spritesheet-sprites);
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @include retina-sprites($retina-groups); }
+
+// Dock Sprite
+@import "../sprites/dock.scss";
 @include sprites($spritesheet-sprites);
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @include retina-sprites($retina-groups); }
 
@@ -13,6 +18,7 @@ body {
 	color: #fff;
 	background: #000 url('/assets/static/images/bg.jpg') bottom center;
 	background-size: cover;
+	overflow: hidden;
 }
 
 h1 {
@@ -102,6 +108,14 @@ header {
 	background-size: 365px 422px;
 	margin: 0 auto;
 	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .5);
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity .4s ease-out, transform .4s ease-out;
+
+	&.hide {
+		opacity: 0;
+		transform: scale(.98);
+	}
 }
 
 .social {
@@ -112,12 +126,36 @@ header {
 	vertical-align: initial !important;
 }
 
+.info {
+	h1 {
+		transition: transform .4s cubic-bezier(.22,1.26,.89,.99);
+	}
+
+	p {
+		transition: transform .4s 0.02s cubic-bezier(.22,1.26,.89,.99);
+	}
+
+	ul {
+		transition: transform .4s 0.04s cubic-bezier(.22,1.26,.89,.99);
+	}
+
+	div {
+		transition: transform .4s 0.08s cubic-bezier(.22,1.26,.89,.99);
+	}
+
+	&.middle {
+		h1, p, ul, div {
+			transform: translate3d(100%, 0, 0);
+		}
+	}
+}
+
 @keyframes bounce {
 	0% {
 		transform: translate3d(0, 0, 0);
 	}
 	50% {
-		transform: translate3d(0, -30px, 0);
+		transform: translate3d(0, -20px, 0);
 	}
 	100% {
 		transform: translate3d(0, 0, 0);
@@ -139,7 +177,7 @@ header {
 
 	ul {
 		display: block;
-		padding: 5px;
+		padding: 10px 5px 5px 5px;
 		margin: 0;
 
 		li {
@@ -149,6 +187,14 @@ header {
 			margin: 0 5px;
 			margin-bottom: 10px;
 
+			i {
+				display: block;
+
+				&.icon-trash {
+					float: right;
+				}
+			}
+
 			span {
 				position: absolute;
 				left: 50%;
@@ -157,14 +203,24 @@ header {
 				width: 4px;
 				height: 4px;
 				border-radius: 4px;
-				background: rgba(255, 255, 255, .5);
+				background: rgba(255, 255, 255, .6);
 				margin-left: -2px;
+
+				&.line {
+					position: static;
+					width: 1px;
+					height: 90%;
+					margin-top: 15%;
+					float: left;
+					margin-right: 5px;
+					background: rgba(255, 255, 255, .25);
+				}
 			}
 		}
 
 		.icon-caption {
 			&.animate {
-				animation: bounce 1s 2;
+				animation: bounce .8s 2;
 			}
 		}
 	}
