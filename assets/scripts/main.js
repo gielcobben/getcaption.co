@@ -3,22 +3,27 @@ const info = document.getElementsByClassName('info')[0];
 const dock = document.getElementsByClassName('dock')[0];
 const caption = document.getElementsByClassName('icon-caption')[0];
 
-setTimeout(() => {
-    dock.classList.remove('hide');
+// element
+imagesLoaded( document.querySelector('body'), (instance) => {
 
     setTimeout(() => {
-
-        caption.classList.add('animate');
+        dock.classList.remove('hide');
 
         setTimeout(() => {
 
-            info.classList.remove('middle');
-            app.classList.remove('hide');
-            caption.classList.remove('animate');
-            // dock.classList.add('hide');
+            caption.classList.add('animate');
 
-        }, 1200)
+            setTimeout(() => {
 
-    }, 100)
+                info.classList.remove('middle');
+                app.classList.remove('hide');
+                caption.classList.remove('animate');
+                // dock.classList.add('hide');
 
-}, 1000)
+            }, 1200)
+
+        }, 100)
+
+    }, 1000)
+
+})
