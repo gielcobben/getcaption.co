@@ -40,11 +40,6 @@ a {
 	color: #fff;
 	text-decoration: none;
 	transition: all .2s ease;
-
-	&:hover {
-		-webkit-box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
-		box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
-	}
 }
 
 small {
@@ -99,6 +94,11 @@ header {
 	color: #fff;
 	padding: 10px 15px;
 	border-radius: 3px;
+
+	&:hover {
+		-webkit-box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
+		box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
+	}
 }
 
 .img {
@@ -124,104 +124,4 @@ header {
 
 .fb-like.fb_iframe_widget span {
 	vertical-align: initial !important;
-}
-
-.info {
-	h1 {
-		transition: transform .4s cubic-bezier(.22,1.26,.89,.99);
-	}
-
-	p {
-		transition: transform .4s 0.02s cubic-bezier(.22,1.26,.89,.99);
-	}
-
-	ul {
-		transition: transform .4s 0.04s cubic-bezier(.22,1.26,.89,.99);
-	}
-
-	div {
-		transition: transform .4s 0.08s cubic-bezier(.22,1.26,.89,.99);
-	}
-
-	&.middle {
-		h1, p, ul, div {
-			transform: translate3d(100%, 0, 0);
-		}
-	}
-}
-
-@keyframes bounce {
-	0% {
-		transform: translate3d(0, 0, 0);
-	}
-	50% {
-		transform: translate3d(0, -20px, 0);
-	}
-	100% {
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-.dock {
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	background: rgba(255, 255, 255, .1);
-	border-radius: 6px 6px 0 0;
-	transform: translate3d(-50%, 0, 0);
-	transition: transform .2s ease-out;
-
-	&.hide {
-		transform: translate3d(-50%, 100%, 0);
-	}
-
-	ul {
-		display: block;
-		padding: 10px 5px 5px 5px;
-		margin: 0;
-
-		li {
-			position: relative;
-			display: inline-block;
-			vertical-align: middle;
-			margin: 0 5px;
-			margin-bottom: 10px;
-
-			i {
-				display: block;
-
-				&.icon-trash {
-					float: right;
-				}
-			}
-
-			span {
-				position: absolute;
-				left: 50%;
-				bottom: -8px;
-				display: block;
-				width: 4px;
-				height: 4px;
-				border-radius: 4px;
-				background: rgba(255, 255, 255, .6);
-				margin-left: -2px;
-
-				&.line {
-					position: static;
-					width: 1px;
-					height: 90%;
-					margin-top: 15%;
-					float: left;
-					margin-right: 5px;
-					background: rgba(255, 255, 255, .25);
-				}
-			}
-		}
-
-		.icon-caption {
-			&.animate {
-				animation: bounce .8s 2;
-			}
-		}
-	}
 }
