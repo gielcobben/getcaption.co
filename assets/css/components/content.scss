@@ -1,0 +1,56 @@
+#wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100vw;
+	height: 100vh;
+	max-width: 900px;
+}
+
+.content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.download {
+	padding: 25px 0;
+}
+
+.button {
+	background: #007AFF;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 3px;
+
+	&:hover {
+		-webkit-box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
+		box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
+	}
+}
+
+.img {
+	width: 365px;
+	height: 422px;
+	background: url('/assets/static/images/app@2x.png');
+	background-size: 365px 422px;
+	margin: 0 auto;
+	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .5);
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity .4s ease-out, transform .4s ease-out;
+
+	&.hide {
+		opacity: 0;
+		transform: scale(.98);
+	}
+}
+
+.social {
+	float: right;
+}
+
+.fb-like.fb_iframe_widget span {
+	vertical-align: initial !important;
+}

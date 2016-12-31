@@ -1,18 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<header>
+	Made with love by <a href="https://twitter.com/gielcobben">@gielcobben</a>.
+	<div class="social">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Caption — The open source, distraction-free way to easily find the right subtitles. http://getcaption.co/ by @gielcobben" data-url="false" data-show-count="false">Tweet</a>
+		<div class="fb-like" data-href="http://getcaption.co/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+	</div>
+</header>
+
 <main id="wrapper">
-	<header>
-		Made with love by <a href="https://twitter.com/gielcobben">@gielcobben</a>.
-		<div class="social">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Caption — The open source, distraction-free way to easily find the right subtitles. http://getcaption.co/ by @gielcobben" data-url="false" data-show-count="false">Tweet</a>
-			<div class="fb-like" data-href="http://getcaption.co/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-		</div>
-	</header>
 	<div class="content">
-		<section class="half app">
-			<div class="img"></div>
-		</section>
 		<section class="half info middle">
 			<h1>Caption</h1>
 			<p>Find the right subtitles. Easy.</p>
@@ -27,23 +25,14 @@
 				<a href="http://updates.getcaption.co/download" target="_blank" class="button"> Download Caption</a>
 			</div>
 		</section>
+		<section class="half app">
+			<div class="img"></div>
+		</section>
 	</div>
-	<footer class="dock hide">
-		<ul>
-			<li>
-				<i class="icon icon-finder"></i>
-				<span></span>
-			</li>
-			<li>
-				<i class="icon icon-caption"></i>
-				<span></span>
-			</li>
-			<li>
-				<span class="line"></span>
-				<i class="icon icon-trash"></i>
-			</li>
-		</ul>
-	</footer>
 </main>
+
+<footer>
+	<a href="">View and contribute on GitHub</a>
+</footer>
 
 {% endblock %}
