@@ -1,29 +1,24 @@
-const app = document.getElementsByClassName('img')[0];
-const info = document.getElementsByClassName('info')[0];
-const dock = document.getElementsByClassName('dock')[0];
-const caption = document.getElementsByClassName('icon-caption')[0];
+$(document).ready(() => {
 
-// element
-imagesLoaded( document.querySelector('body'), (instance) => {
+    const downloadButton = $('.download');
+    const featureItems = $('.features li');
+    const featureIcons = $('.content .icon');
 
-    // setTimeout(() => {
-    //     dock.classList.remove('hide');
-    //
-    //     setTimeout(() => {
-    //
-    //         caption.classList.add('animate');
-    //
-    //         setTimeout(() => {
-    //
-    //             info.classList.remove('middle');
-    //             app.classList.remove('hide');
-    //             caption.classList.remove('animate');
-    //             // dock.classList.add('hide');
-    //
-    //         }, 1200)
-    //
-    //     }, 100)
-    //
-    // }, 1000)
+    // $(featureIcons).hover(() => {
+    //     $(downloadButton).addClass('ticker');
+    // }, () => {
+    //     $(downloadButton).removeClass('ticker');
+    // });
 
-})
+    for (let i = 0; i < featureIcons.length; i++) {
+        const featureIcon = featureIcons[i];
+
+        $(featureIcon).hover(() => {
+            $(featureItems[i]).addClass('show');
+        }, () => {
+            $(featureItems[i]).removeClass('show');
+        })
+
+    }
+
+});

@@ -3,7 +3,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	color: #fff;
-	background: #000 url('/assets/static/images/bg.jpg') bottom center;
+	background: #000 url('/assets/static/images/bg.jpg') center center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -24,9 +24,13 @@ p {
 
 a {
 	font-weight: 400;
-	color: #fff;
+	color: rgba(255, 255, 255, .5);
 	text-decoration: none;
 	transition: all .2s ease;
+
+    &:hover {
+        color: rgba(255, 255, 255, 1);
+    }
 }
 
 small {
@@ -39,7 +43,7 @@ ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 0 auto 25px auto;
+	margin: 0 auto 10px auto;
 	max-width: 350px;
 }
 

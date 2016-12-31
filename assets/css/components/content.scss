@@ -3,7 +3,7 @@
 	margin: 0 auto;
 	width: 100vw;
 	height: 100vh;
-	max-width: 900px;
+	max-width: 1024px;
 }
 
 .content {
@@ -14,8 +14,18 @@
 	text-align: center;
 }
 
+.icon {
+	cursor: pointer;
+	transition: background .2s ease-out;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, .2);
+	}
+}
+
 .download {
 	padding: 25px 0;
+	margin: 25px auto 0 auto;
 }
 
 .button {
@@ -30,21 +40,8 @@
 	}
 }
 
-.img {
-	width: 365px;
-	height: 422px;
-	background: url('/assets/static/images/app@2x.png');
-	background-size: 365px 422px;
-	margin: 0 auto;
-	box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .5);
-	opacity: 1;
-	transform: scale(1);
-	transition: opacity .4s ease-out, transform .4s ease-out;
-
-	&.hide {
-		opacity: 0;
-		transform: scale(.98);
-	}
+.half {
+	width: 50%;
 }
 
 .social {

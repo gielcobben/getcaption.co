@@ -2,7 +2,7 @@
 {% block content %}
 
 <header>
-	Made with love by <a href="https://twitter.com/gielcobben">@gielcobben</a>.
+	Made with love by <a href="https://twitter.com/gielcobben" target="_blank">@gielcobben</a>.
 	<div class="social">
 		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Caption — The open source, distraction-free way to easily find the right subtitles. http://getcaption.co/ by @gielcobben" data-url="false" data-show-count="false">Tweet</a>
 		<div class="fb-like" data-href="http://getcaption.co/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
@@ -17,22 +17,34 @@
 			<ul>
 				<li class="icon icon-textsearch"></li>
 				<li class="icon icon-dragdrop"></li>
-				<li class="icon-languages"></li>
+				<li class="icon icon-languages"></li>
 				<li class="icon icon-textsearch"></li>
 				<li class="icon icon-textsearch"></li>
 			</ul>
+			<div class="info">
+				<ul class="features">
+					<li>Text Search.</li>
+					<li>Drag and Drop multiple video files.</li>
+					<li>All languages</li>
+					<li>Nog Iets</li>
+					<li>en nog iets</li>
+				</ul>
+			</div>
 			<div class="download">
-				<a href="http://updates.getcaption.co/download" target="_blank" class="button"> Download Caption</a>
+				<a href="http://updates.getcaption.co/download/osx" target="_blank" class="button"> Download Caption</a>
 			</div>
 		</section>
-		<section class="half app">
-			<div class="img"></div>
+		<section class="half">
+			<div class="app">
+				<video src="/assets/static/video/caption.mp4" autoplay loop></video>
+			</div>
 		</section>
 	</div>
 </main>
 
 <footer>
-	<a href="">View and contribute on GitHub</a>
+	<a href="https://github.com/gielcobben/Caption" target="_blank">View and contribute on GitHub</a>
+	<a href="https://github.com/gielcobben/Caption/releases" class="changelog" target="_blank">View changelog</a>
 </footer>
 
 {% endblock %}
