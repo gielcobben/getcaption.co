@@ -31,20 +31,3 @@
         }
     }
 }
-
-.download {
-	padding: 25px 0;
-	margin: 5px auto 0 auto;
-}
-
-.button {
-	background: #007AFF;
-	color: #fff;
-	padding: 10px 15px;
-	border-radius: 3px;
-
-	&:hover {
-		-webkit-box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
-		box-shadow: 0 5px 40px 0 rgba(0,0,0,.4);
-	}
-}
