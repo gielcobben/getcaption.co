@@ -12,6 +12,11 @@
 	align-items: center;
 	justify-content: space-between;
 	text-align: center;
+
+	@media(max-width: 760px) {
+		flex-direction: column;
+		padding: 150px 0;
+	}
 }
 
 .icon {
@@ -26,6 +31,10 @@
 
 .half {
 	width: 50%;
+
+	@media(max-width: 760px) {
+		width: 100%;
+	}
 }
 
 .download {
