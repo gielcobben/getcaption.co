@@ -1,29 +1,27 @@
-const app = document.getElementsByClassName('img')[0];
-const info = document.getElementsByClassName('info')[0];
-const dock = document.getElementsByClassName('dock')[0];
-const caption = document.getElementsByClassName('icon-caption')[0];
+$(document).ready(() => {
 
-// element
-imagesLoaded( document.querySelector('body'), (instance) => {
+    // Elements
+    const downloadButton = $('.download');
+    const featureItems = $('.features li');
+    const featureIcons = $('.content .icon');
 
-    setTimeout(() => {
-        dock.classList.remove('hide');
+    // Ticker
+    for (let i = 0; i < featureIcons.length; i++) {
 
-        setTimeout(() => {
+        const featureIcon = featureIcons[i];
 
-            caption.classList.add('animate');
+        $(featureIcon).hover(() => {
+            $(featureItems[i]).addClass('show');
+        }, () => {
+            $(featureItems[i]).removeClass('show');
+        });
 
-            setTimeout(() => {
+    }
 
-                info.classList.remove('middle');
-                app.classList.remove('hide');
-                caption.classList.remove('animate');
-                // dock.classList.add('hide');
+    // Remove download button on mobile
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        const html = '<span class="button">Available on MacOS...</span>'
+        downloadButton.html(html)
+    }
 
-            }, 1200)
-
-        }, 100)
-
-    }, 1000)
-
-})
+});
