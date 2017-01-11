@@ -2,7 +2,7 @@ header {
 	position: absolute;
 	padding: 32px;
 	width: 100%;
-    font-size: 12px;
+	font-size: 12px;
 	color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-between;
@@ -28,4 +28,17 @@ header {
 
 .fb-like.fb_iframe_widget span {
 	vertical-align: initial !important;
+}
+
+@media(max-width: 760px) {
+	header {
+		span {
+			display: none;
+		}
+
+		.logo {
+			display: block;
+			margin: 0 auto;
+		}
+	}
 }

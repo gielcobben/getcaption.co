@@ -8,15 +8,11 @@
 
 .content {
 	height: 100%;
+	min-height: 500px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	text-align: center;
-
-	@media(max-width: 760px) {
-		flex-direction: column;
-		padding: 150px 0;
-	}
 }
 
 .icon {
@@ -31,10 +27,6 @@
 
 .half {
 	width: 50%;
-
-	@media(max-width: 760px) {
-		width: 100%;
-	}
 }
 
 .download {
@@ -43,13 +35,23 @@
 }
 
 .button {
-	background: #007AFF;
+	background: #007aff;
 	color: #fff;
 	padding: 10px 15px;
 	border-radius: 3px;
 
 	&:hover {
-		background: #FFF;
-		color: #007AFF;
+		background: #fff;
+		color: #007aff;
+	}
+}
+
+@media(max-width: 760px) {
+	.half {
+		width: 100%;
+	}
+
+	.video {
+		display: none;
 	}
 }

@@ -4,7 +4,9 @@
 // Features sprite
 @import "../sprites/features.scss";
 @include sprites($spritesheet-sprites);
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @include retina-sprites($retina-groups); }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	@include retina-sprites($retina-groups);
+}
 
 @import "components/base.scss";
 @import "components/header.scss";

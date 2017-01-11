@@ -1,9 +1,9 @@
 body {
-	font:14px/1 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 14px/1 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	color: #fff;
-	background: #000 url('/assets/static/images/bg.jpg') center center;
+	background: #000 url("/assets/static/images/bg.jpg") center center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -28,9 +28,9 @@ a {
 	text-decoration: none;
 	transition: all .2s ease-out;
 
-    &:hover {
-        color: rgba(255, 255, 255, 1);
-    }
+	&:hover {
+		color: rgba(255, 255, 255, 1);
+	}
 }
 
 small {
