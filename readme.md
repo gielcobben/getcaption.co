@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="http://captionformac.com/icon.png" height="64">
+  <img src="https://getcaption.co/icon.png" height="64">
   <h3 align="center">Caption Website</h3>
-  <p align="center">An open-source subtitle app built with web technology<p>
+  <p align="center">Find the right subtitles. Easy.<p>
 </p>
 
 ## Get Caption (App)
 
-- **[Download the latest release](http://captionformac.com/)** (macOS only)
+- **[Download the latest release](https://getcaption.co/)** (macOS only)
 - [Caption App Repository](https://github.com/gielcobben/Caption)
 
 ## Project layout
