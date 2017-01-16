@@ -6,6 +6,7 @@ header {
 	color: rgba(255, 255, 255, .5);
 	display: flex;
 	justify-content: space-between;
+	z-index: 999;
 
 	span {
 		display: inline-block;
