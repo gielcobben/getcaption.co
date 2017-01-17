@@ -20,7 +20,7 @@ $(document).ready(() => {
 
     // Remove download button on mobile
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        const html = '<span class="button">Available on MacOS...</span>'
+        const html = '<span class="button">Available exclusively for Mac</span>'
         downloadButton.html(html)
     }
 
