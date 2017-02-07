@@ -15,11 +15,12 @@ header {
 }
 
 .logo {
-	display: inline-block;
+	position: absolute;
+	left: 50%;
 	width: 46px;
 	height: 46px;
 	background: url("/assets/static/images/icon.png") no-repeat;
-	margin: -10px 0 0 0;
+	margin: -10px 0 0 -23px;
 
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 		background: url("/assets/static/images/icon@2x.png") no-repeat;
@@ -39,7 +40,6 @@ header {
 
 		.logo {
 			display: block;
-			margin: 0 auto;
 		}
 	}
 }
