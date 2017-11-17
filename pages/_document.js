@@ -24,7 +24,7 @@ export default class extends Document {
   get helmetJsx() {
     return (
       <Helmet htmlAttributes={{ lang: "en" }}>
-        <title>Caption – Start watching</title>
+        <title>Caption – Start Watching</title>
       </Helmet>
     );
   }
