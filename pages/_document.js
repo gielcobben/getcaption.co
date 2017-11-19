@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Giel</title>
+          <title>Caption – Start watching</title>
         </Head>
         <body>
           {/* Facebook */}
