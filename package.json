@@ -10,16 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/motif/MoonbaseTemplate.git"
+    "url": "https://github.com/gielcobben/getcaption.co/"
   },
   "author": "Giel Cobben",
-  "license": "",
+  "license": "MIT",
   "homepage": "http://getcaption.co/",
   "dependencies": {
     "next": "^4.1.4",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-helmet": "^5.2.0"
+    "react-dom": "^16.1.1"
   }
 }
