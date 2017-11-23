@@ -12,11 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1"
-          />
+          <meta charset="utf-8" />
           <meta name="description" content="Prototype" />
           <meta name="HandheldFriendly" content="True" />
           <meta name="MobileOptimized" content="320" />
@@ -24,51 +20,44 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
           />
-          <link rel="shortcut icon" href="favicon.ico" />
+          <link rel="shortcut icon" href="/static/images/favicon.ico" />
 
           <title>Caption – Start watching</title>
           <meta
             name="description"
-            content="The ultimate Sketch library for user flows, content maps, screen annotations, and more."
+            content="Caption takes the effort out of finding and setting up the right subtitles."
           />
-          <link rel="stylesheet" href="assets/css/screen.css" />
-          <link rel="shortcut icon" href="favicon.ico?ref=cachebuster" />
+          <link
+            rel="shortcut icon"
+            href="/static/images/favicon.ico?ref=cachebuster"
+          />
 
-          <meta itemprop="name" content="Flowkit for Sketch" />
+          <meta itemprop="name" content="Caption — Start watching" />
           <meta
             itemprop="description"
-            content="The ultimate Sketch library for user flows, content maps, screen annotations, and more."
+            content="Caption takes the effort out of finding and setting up the right subtitles."
           />
-          <meta
-            itemprop="image"
-            content="https://mds-assets.s3.amazonaws.com/flowkit/flowkit-card.jpg"
-          />
+          <meta itemprop="image" content="/static/images/cover.png" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@mds" />
-          <meta name="twitter:title" content="Flowkit for Sketch" />
+          <meta name="twitter:site" content="@gielcobben" />
+          <meta name="twitter:title" content="Caption — Start watching" />
           <meta
             name="twitter:description"
-            content="The ultimate Sketch library for user flows, content maps, screen annotations, and more."
+            content="Caption takes the effort out of finding and setting up the right subtitles."
           />
-          <meta name="twitter:creator" content="@mds" />
-          <meta
-            name="twitter:image:src"
-            content="https://mds-assets.s3.amazonaws.com/flowkit/flowkit-card.jpg"
-          />
+          <meta name="twitter:creator" content="@gielcobben" />
+          <meta name="twitter:image:src" content="/static/images/cover.png" />
 
-          <meta property="og:title" content="Flowkit for Sketch" />
+          <meta property="og:title" content="Caption — Start watching" />
           <meta property="og:type" content="article" />
-          <meta property="og:url" content="https://flowk.it" />
-          <meta
-            property="og:image"
-            content="https://mds-assets.s3.amazonaws.com/flowkit/flowkit-card.jpg"
-          />
+          <meta property="og:url" content="https://getcaption.co/" />
+          <meta property="og:image" content="/static/images/cover.png" />
           <meta
             property="og:description"
-            content="The ultimate Sketch library for user flows, content maps, screen annotations, and more."
+            content="Caption takes the effort out of finding and setting up the right subtitles."
           />
-          <meta property="og:site_name" content="Flowkit for Sketch" />
+          <meta property="og:site_name" content="Caption – Start watching" />
         </Head>
 
         <body>
