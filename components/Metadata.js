@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 
 const Metadata = ({ version }) => (
   <span>
-    A product by {" "}
+    A product by{" "}
     <a href="https://twitter.com/gieclobben" target="_blank">
       Giel
     </a>{" "}
     &amp;{" "}
     <a href="https://twitter.com/vernon_dg" target="_blank">
       Vernon
-    </a>. Contribute on {" "}
+    </a>. Contribute on{" "}
     <a href="https://github.com/gielcobben/Caption" target="_blank">
       Github.
     </a>

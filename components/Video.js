@@ -4,12 +4,14 @@ const Video = () => (
 
     <style jsx>{`
       section {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 50%;
         height: 100vh;
-        background-image: linear-gradient(45deg, #003aff 0%, #00b9ff 100%);
+        background-image: var(--brand-gradient);
+        overflow: hidden;
       }
 
       @media (max-width: 800px) {
@@ -20,6 +22,10 @@ const Video = () => (
       }
 
       div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -222px 0 0 -224px
         width: 448px;
         height: 444px;
         background: url("/static/images/app.png");

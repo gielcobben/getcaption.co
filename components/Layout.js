@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
-import reset from "../styles/reset";
+import variables from "../styles/variables";
+import base from "../styles/base";
 
 const Layout = ({ children }) => (
   <main>
     {children}
 
     <style jsx global>
-      {reset}
+      {variables}
+    </style>
+
+    <style jsx global>
+      {base}
     </style>
 
     <style jsx global>{`

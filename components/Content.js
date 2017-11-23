@@ -1,61 +1,78 @@
-import Social from "./Social";
-import Info from "./Info";
-import Metadata from "./Metadata";
+import Footer from "./Footer";
 
-class Content extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { version: "v2.0.0" };
-  }
+const Content = () => (
+  <section>
+    <div>
+      <h1>Caption</h1>
+      <h2>Start Watching</h2>
+      <p>
+        Caption takes the effort out of finding and setting up the right
+        subtitles. A simple design, <strong>drag &amp; drop</strong> search, and{" "}
+        <strong>automatic downloading &amp; renaming</strong> let you just start
+        watching. Caption is <strong>multi-platform</strong>, open-source, and
+        build entirely on web technology.
+      </p>
+      <a className="button" href="https://download.getcaption.co/download/osx">
+        Download for free
+      </a>
+    </div>
 
-  async componentDidMount() {
-    const req = await fetch(
-      "https://api.github.com/repos/gielcobben/caption/releases",
-    );
-    const res = await req.json();
-    this.setState({ version: res[0].tag_name });
-  }
+    <Footer />
 
-  render() {
-    const { version } = this.state;
+    <style jsx>{`
+      section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+      }
 
-    return (
-      <section>
-        <div>
-          <Info />
-          <Social />
-          <Metadata version={version} />
-        </div>
+      @media (max-width: 800px) {
+        section {
+          padding: 0;
+          width: 100%;
+          height: calc(100% - 444px);
+          text-align: center;
+        }
+      }
 
-        <style jsx>{`
-          section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-            width: 50%;
-            height: 100vh;
-          }
+      @media (max-height: 800px) {
+        section {
+          overflow: auto;
+        }
+      }
 
-          @media (max-width: 800px) {
-            section {
-              padding: 0;
-              width: 100%;
-              height: calc(100% - 444px);
-            }
-          }
+      div {
+        margin: auto;
+        padding: var(--content-padding);
+        max-width: var(--content-width);
+      }
 
-          div {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            padding: 80px;
-            max-width: 640px;
-          }
-        `}</style>
-      </section>
-    );
-  }
-}
+      p {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      .button {
+        background: var(--brand-color);
+        border: 0;
+        padding: 12px 16px;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        cursor: pointer;
+        border-radius: 0.3rem;
+        will-change: opacity;
+        transition: opacity 0.2s ease-out;
+      }
+
+      .button:hover {
+        opacity: 0.8;
+      }
+    `}</style>
+  </section>
+);
 
 export default Content;
