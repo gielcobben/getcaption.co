@@ -83,6 +83,19 @@ export default class MyDocument extends Document {
             charset="utf-8"
           />
           <script async defer src="https://buttons.github.io/buttons.js" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-89238300-1"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-89238300-1');`,
+            }}
+          />
         </body>
       </html>
     );
