@@ -50,24 +50,24 @@ class Content extends React.Component {
     super(props);
 
     this.state = {
-      platform: "Windows",
+      platform: undefined,
       systems: [
         {
           name: "Mac",
           icon: iconMac,
-          downloadLink: "",
+          downloadLink: undefined,
           extension: "dmg",
         },
         {
           name: "Windows",
           icon: iconWindows,
-          downloadLink: "",
+          downloadLink: undefined,
           extension: "exe",
         },
         {
           name: "Linux",
           icon: iconLinux,
-          downloadLink: "",
+          downloadLink: undefined,
           extension: "deb",
         },
       ],
@@ -76,7 +76,6 @@ class Content extends React.Component {
 
   async componentDidMount() {
     const { systems } = this.state;
-
     const req = await fetch(
       "https://api.github.com/repos/gielcobben/caption/releases",
     );
@@ -84,10 +83,6 @@ class Content extends React.Component {
 
     const stables = res.filter(release => {
       return !release.prerelease;
-    });
-
-    this.setState({
-      platform: this.getOS(),
     });
 
     stables[0].assets.map(asset => {
@@ -101,13 +96,17 @@ class Content extends React.Component {
         }
       });
     });
+
+    this.setState({
+      platform: this.getOS(),
+    });
   }
 
   getOS = () => {
-    const platform = navigator.platform;
-    const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
-    const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
     let os;
+    const platform = navigator.platform;
+    const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+    const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
 
     if (macosPlatforms.indexOf(platform) !== -1) {
       os = "Mac";
@@ -135,7 +134,9 @@ class Content extends React.Component {
             just start watching. Caption is <strong>multi-platform</strong>,
             open-source, and build entirely on web technology.
           </p>
-          <DownloadButton currentSystemName={platform} systems={systems} />
+          {platform && (
+            <DownloadButton currentSystemName={platform} systems={systems} />
+          )}
         </div>
 
         <Footer />
