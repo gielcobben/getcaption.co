@@ -24,6 +24,7 @@ class DownloadButton extends React.Component {
       return currentSystemName === system.name;
     })[0];
 
+    // Hide download button until we found the users's platform.
     if (!currentSystem) {
       return (
         <div>
