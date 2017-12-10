@@ -50,7 +50,7 @@ class Content extends React.Component {
     super(props);
 
     this.state = {
-      platform: "Windows",
+      platform: null,
       systems: [
         {
           name: "Mac",
@@ -115,6 +115,8 @@ class Content extends React.Component {
       os = "Windows";
     } else if (!os && /Linux/.test(platform)) {
       os = "Linux";
+    } else {
+      os = "Mac";
     }
 
     return os;
@@ -133,7 +135,7 @@ class Content extends React.Component {
             subtitles. A simple design, <strong>drag &amp; drop</strong> search,
             and <strong>automatic downloading &amp; renaming</strong> let you
             just start watching. Caption is <strong>multi-platform</strong>,
-            open-source, and build entirely on web technology.
+            open-source, and built entirely on web technology.
           </p>
           <DownloadButton currentSystemName={platform} systems={systems} />
         </div>
