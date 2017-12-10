@@ -115,6 +115,8 @@ class Content extends React.Component {
       os = "Windows";
     } else if (!os && /Linux/.test(platform)) {
       os = "Linux";
+    } else {
+      os = "Mac";
     }
 
     return os;
