@@ -50,7 +50,7 @@ class Content extends React.Component {
     super(props);
 
     this.state = {
-      platform: "Windows",
+      platform: null,
       systems: [
         {
           name: "Mac",
@@ -109,6 +109,8 @@ class Content extends React.Component {
     const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
     let os;
 
+    console.log('platform', platform);
+
     if (macosPlatforms.indexOf(platform) !== -1) {
       os = "Mac";
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
@@ -116,6 +118,8 @@ class Content extends React.Component {
     } else if (!os && /Linux/.test(platform)) {
       os = "Linux";
     }
+
+    console.log('os', os);
 
     return os;
   };

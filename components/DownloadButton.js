@@ -24,6 +24,21 @@ class DownloadButton extends React.Component {
       return currentSystemName === system.name;
     })[0];
 
+    if (!currentSystem) {
+      return (
+        <div>
+          <div className="button-holder" />
+          <style jsx>
+            {`
+              .button-holder {
+                height: 39px;
+              }
+            `}
+          </style>
+        </div>
+      );
+    }
+
     return (
       <div>
         <div className="button-wrapper">
