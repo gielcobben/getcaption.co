@@ -37,6 +37,13 @@ const Video = () => (
           background-size: 448px 444px;
         }
       }
+
+      @media (max-width: 320px) {
+        div {
+          background-size: 380px 380px;
+          background-position: center;
+        }
+      }
     `}</style>
   </section>
 );
