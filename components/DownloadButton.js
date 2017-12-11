@@ -1,4 +1,4 @@
-import Router from "next/router";
+import Link from "next/link";
 
 const dropdownIcon = (
   <svg
@@ -30,10 +30,12 @@ class DownloadButton extends React.Component {
       <div>
         <div className="button-wrapper">
           <button onBlur={() => this.setState({ show: false })}>
-            <a href={currentSystem.downloadLink}>
-              <span className="icon">{currentSystem.icon}</span>
-              <span className="name">Download for {currentSystem.name}</span>
-            </a>
+            <Link href="/thanks">
+              <a>
+                <span className="icon">{currentSystem.icon}</span>
+                <span className="name">Download for {currentSystem.name}</span>
+              </a>
+            </Link>
             <span
               className="icon-dropdown"
               onClick={() => this.setState({ show: !show })}
@@ -50,11 +52,13 @@ class DownloadButton extends React.Component {
               .map((system, index) => {
                 return (
                   <li key={index}>
-                    <a href={system.downloadLink}>
-                      <span className="icon">{system.icon}</span>
-                      <span className="name">{system.name}</span>
-                      <small>(.{system.extension})</small>
-                    </a>
+                    <Link href="/thanks">
+                      <a>
+                        <span className="icon">{system.icon}</span>
+                        <span className="name">{system.name}</span>
+                        <small>(.{system.extension})</small>
+                      </a>
+                    </Link>
                   </li>
                 );
               })}

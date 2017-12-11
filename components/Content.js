@@ -55,19 +55,16 @@ class Content extends React.Component {
         {
           name: "Mac",
           icon: iconMac,
-          downloadLink: undefined,
           extension: "dmg",
         },
         {
           name: "Windows",
           icon: iconWindows,
-          downloadLink: undefined,
           extension: "exe",
         },
         {
           name: "Linux",
           icon: iconLinux,
-          downloadLink: undefined,
           extension: "deb",
         },
       ],
@@ -75,28 +72,6 @@ class Content extends React.Component {
   }
 
   async componentDidMount() {
-    const { systems } = this.state;
-    const req = await fetch(
-      "https://api.github.com/repos/gielcobben/caption/releases",
-    );
-    const res = await req.json();
-
-    const stables = res.filter(release => {
-      return !release.prerelease;
-    });
-
-    stables[0].assets.map(asset => {
-      const extension = asset.name.substr(asset.name.lastIndexOf(".") + 1);
-      systems.map(system => {
-        if (extension === system.extension) {
-          system.downloadLink = asset.browser_download_url;
-          this.setState({
-            systems,
-          });
-        }
-      });
-    });
-
     this.setState({
       platform: this.getOS(),
     });
