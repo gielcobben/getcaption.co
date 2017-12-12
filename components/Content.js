@@ -106,10 +106,9 @@ class Content extends React.Component {
           <h2>Start Watching</h2>
           <p>
             Caption takes the effort out of finding and setting up the right
-            subtitles. A simple design, <strong>drag &amp; drop</strong> search,
-            and <strong>automatic downloading &amp; renaming</strong> let you
-            just start watching. Caption is <strong>multi-platform</strong>,
-            open-source, and built entirely on web technology.
+            subtitles. A simple design, drag &amp; drop search, and automatic
+            downloading &amp; renaming let you just start watching. Caption is
+            multi-platform, open-source, and built entirely on web technology.
           </p>
           {platform && (
             <DownloadButton currentSystemName={platform} systems={systems} />

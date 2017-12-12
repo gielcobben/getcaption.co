@@ -46,7 +46,7 @@ class DownloadButton extends React.Component {
       <div>
         <div className="button-wrapper">
           <button onBlur={() => this.setState({ show: false })}>
-            <Link href="/thanks">
+            <Link href={`/download?extension=${currentSystem.extension}`}>
               <a>
                 <span className="icon">{currentSystem.icon}</span>
                 <span className="name">Download for {currentSystem.name}</span>
@@ -68,7 +68,7 @@ class DownloadButton extends React.Component {
               .map((system, index) => {
                 return (
                   <li key={index}>
-                    <Link href="/thanks">
+                    <Link href={`/download?extension=${system.extension}`}>
                       <a>
                         <span className="icon">{system.icon}</span>
                         <span className="name">{system.name}</span>
