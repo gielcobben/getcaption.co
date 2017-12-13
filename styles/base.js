@@ -26,6 +26,7 @@ export default css`
 
   small {
     font-size: 80%;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   img {

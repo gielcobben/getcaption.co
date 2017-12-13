@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="description" content="Prototype" />
           <meta name="HandheldFriendly" content="True" />
           <meta name="MobileOptimized" content="320" />
@@ -20,7 +20,41 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
           />
-          <link rel="shortcut icon" href="/static/images/favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="https://getcaption.co/static/images/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="https://getcaption.co/static/images/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="https://getcaption.co/static/images/favicon-16x16.png"
+          />
+          <link
+            rel="manifest"
+            href="https://getcaption.co/static/images/manifest.json"
+          />
+          <link
+            rel="mask-icon"
+            href="https://getcaption.co/static/images/safari-pinned-tab.svg"
+            color="#5bbad5"
+          />
+          <link
+            rel="shortcut icon"
+            href="https://getcaption.co/static/images/favicon.ico"
+          />
+          <meta
+            name="msapplication-config"
+            content="https://getcaption.co/static/images/browserconfig.xml"
+          />
+          <meta name="theme-color" content="#ffffff" />
 
           <title>Caption – Start watching</title>
           <meta
@@ -32,13 +66,13 @@ export default class MyDocument extends Document {
             href="/static/images/favicon.ico?ref=cachebuster"
           />
 
-          <meta itemprop="name" content="Caption — Start watching" />
+          <meta itemProp="name" content="Caption — Start watching" />
           <meta
-            itemprop="description"
+            itemProp="description"
             content="Caption takes the effort out of finding and setting up the right subtitles."
           />
           <meta
-            itemprop="image"
+            itemProp="image"
             content="https://getcaption.co/static/images/cover.png"
           />
 
@@ -67,6 +101,7 @@ export default class MyDocument extends Document {
             content="Caption takes the effort out of finding and setting up the right subtitles."
           />
           <meta property="og:site_name" content="Caption – Start watching" />
+          <meta property="fb:app_id" content="231104767338918" />
         </Head>
 
         <body>

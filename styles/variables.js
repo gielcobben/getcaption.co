@@ -6,6 +6,7 @@ export default css`
     --content-padding: 60px;
     --brand-color: #007aff;
     --brand-gradient: linear-gradient(45deg, #003aff 0%, #00b9ff 100%);
+    --brand-color-2: #0095ff;
   }
 
   @media (max-width: 1024px) {
