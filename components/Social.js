@@ -44,6 +44,7 @@ const Social = () => (
         flex-direction: row;
         list-style: none;
         margin: 0;
+        font-size: 14px;
       }
 
       @media (max-width: 800px) {
@@ -58,6 +59,11 @@ const Social = () => (
         margin-right: 16px;
         font-weight: bold;
         color: #666;
+      }
+
+      a {
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: normal;
       }
     `}</style>
 

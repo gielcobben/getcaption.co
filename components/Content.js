@@ -56,24 +56,50 @@ class Content extends React.Component {
           name: "Mac",
           icon: iconMac,
           extension: "dmg",
+          downloadLink: undefined,
         },
         {
           name: "Windows",
           icon: iconWindows,
           extension: "exe",
+          downloadLink: undefined,
         },
         {
           name: "Linux",
           icon: iconLinux,
           extension: "deb",
+          downloadLink: undefined,
         },
       ],
     };
   }
 
   async componentDidMount() {
+    const { systems } = this.state;
+
+    const req = await fetch(
+      "https://api.github.com/repos/gielcobben/caption/releases",
+    );
+    const res = await req.json();
+
+    const stables = res.filter(release => {
+      return !release.prerelease;
+    });
+
+    const latest = stables[0];
+
+    latest.assets.map(asset => {
+      const extension = asset.name.substr(asset.name.lastIndexOf(".") + 1);
+      systems.map(system => {
+        if (system.extension === extension) {
+          system.downloadLink = asset.browser_download_url;
+        }
+      });
+    });
+
     this.setState({
       platform: this.getOS(),
+      systems,
     });
   }
 

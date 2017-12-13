@@ -46,12 +46,10 @@ class DownloadButton extends React.Component {
       <div>
         <div className="button-wrapper">
           <button onBlur={() => this.setState({ show: false })}>
-            <Link href={`/download?extension=${currentSystem.extension}`}>
-              <a>
-                <span className="icon">{currentSystem.icon}</span>
-                <span className="name">Download for {currentSystem.name}</span>
-              </a>
-            </Link>
+            <a href={currentSystem.downloadLink}>
+              <span className="icon">{currentSystem.icon}</span>
+              <span className="name">Download for {currentSystem.name}</span>
+            </a>
             <span
               className="icon-dropdown"
               onClick={() => this.setState({ show: !show })}
@@ -68,13 +66,11 @@ class DownloadButton extends React.Component {
               .map((system, index) => {
                 return (
                   <li key={index}>
-                    <Link href={`/download?extension=${system.extension}`}>
-                      <a>
-                        <span className="icon">{system.icon}</span>
-                        <span className="name">{system.name}</span>
-                        <small>(.{system.extension})</small>
-                      </a>
-                    </Link>
+                    <a href={`${system.downloadLink}`}>
+                      <span className="icon">{system.icon}</span>
+                      <span className="name">{system.name}</span>
+                      <small>(.{system.extension})</small>
+                    </a>
                   </li>
                 );
               })}
@@ -152,6 +148,7 @@ class DownloadButton extends React.Component {
             list-style: none;
             font-size: 14px;
             opacity: 0;
+            visibility: hidden;
             border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
             z-index: 4;
@@ -161,6 +158,7 @@ class DownloadButton extends React.Component {
 
           ul.open {
             opacity: 1;
+            visibility: visible;
             transform: scale(1) translate3d(0, 0, 0);
           }
 

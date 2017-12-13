@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="466" height="466" viewBox="0 0 466 466">
+  <defs>
+    <filter id="safari-pinned-tab-a" width="107.1%" height="107.1%" x="-3.6%" y="-1.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="safari-pinned-tab-c" x1="84.14%" x2="12.735%" y1="9.74%" y2="87.955%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <linearGradient id="safari-pinned-tab-d" x1="50%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".1"/>
+      <stop offset="100%" stop-color="#FFF" stop-opacity=".1"/>
+    </linearGradient>
+    <circle id="safari-pinned-tab-b" cx="225" cy="225" r="225"/>
+    <linearGradient id="safari-pinned-tab-g" x1="54.754%" x2="17.389%" y1="40.786%" y2="88.54%">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#DDE2E7"/>
+    </linearGradient>
+    <path id="safari-pinned-tab-f" d="M351.045488,200.892857 C339.240938,140.70407 287.530367,96.4285714 227.073733,96.4285714 C153.991961,96.4285714 96.4285714,153.991961 96.4285714,227.073733 C96.4285714,296.008039 153.991961,353.571429 227.073733,353.571429 C288.509189,353.571429 340.913083,307.850641 351.587338,249.107143 L284.704116,249.107143 C275.240797,272.567292 252.17259,289.285714 225.47619,289.285714 C189.49598,289.285714 160.714286,260.50402 160.714286,225.47619 C160.714286,189.49598 189.49598,160.714286 225.47619,160.714286 C252.015204,160.714286 274.968679,177.236166 284.535329,200.892856 L351.045488,200.892857 Z M227.517717,417.857143 C118.487941,417.857143 32.1428571,331.512059 32.1428571,227.517717 C32.1428571,118.487941 118.487941,32.1428571 227.517717,32.1428571 C331.512059,32.1428571 417.857143,118.487941 417.857143,227.517717 C417.857143,331.512059 331.512059,417.857143 227.517717,417.857143 Z"/>
+    <filter id="safari-pinned-tab-e" width="116.6%" height="116.6%" x="-8.3%" y="-4.1%" filterUnits="objectBoundingBox">
+      <feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8"/>
+      <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" filter="url(#safari-pinned-tab-a)" transform="translate(8)">
+    <use fill="#007AFF" xlink:href="#safari-pinned-tab-b"/>
+    <use fill="url(#safari-pinned-tab-c)" style="mix-blend-mode:soft-light" xlink:href="#safari-pinned-tab-b"/>
+    <circle cx="225" cy="225" r="222.991" stroke="url(#safari-pinned-tab-d)" stroke-width="4.018"/>
+    <g>
+      <use fill="#000" filter="url(#safari-pinned-tab-e)" xlink:href="#safari-pinned-tab-f"/>
+      <use fill="url(#safari-pinned-tab-g)" xlink:href="#safari-pinned-tab-f"/>
+    </g>
+  </g>
+</svg>
