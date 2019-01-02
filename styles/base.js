@@ -1,6 +1,6 @@
 import css from "styled-jsx/css";
 
-export default css`
+export default css.global`
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;

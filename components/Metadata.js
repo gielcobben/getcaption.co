@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 const Metadata = ({ version }) => (
   <span>
     A product by{" "}
-    <a href="https://twitter.com/gieclobben" target="_blank">
+    <a href="https://twitter.com/gielcobben" target="_blank">
       Giel
     </a>{" "}
     &amp;{" "}
     <a href="https://twitter.com/vernon_dg" target="_blank">
       Vernon
-    </a>. Contribute on{" "}
+    </a>
+    . Contribute on{" "}
     <a href="https://github.com/gielcobben/Caption" target="_blank">
       Github.
     </a>
@@ -24,7 +25,7 @@ const Metadata = ({ version }) => (
 );
 
 Metadata.PropTypes = {
-  version: PropTypes.string,
+  version: PropTypes.string
 };
 
 export default Metadata;

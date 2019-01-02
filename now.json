@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "caption-website",
+  "public": false,
+  "alias": ["getcaption.co", "www.getcaption.co"],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+}

@@ -56,7 +56,6 @@ export default class MyDocument extends Document {
           />
           <meta name="theme-color" content="#ffffff" />
 
-          <title>Caption – Start watching</title>
           <meta
             name="description"
             content="Caption takes the effort out of finding and setting up the right subtitles."
@@ -102,6 +101,20 @@ export default class MyDocument extends Document {
           />
           <meta property="og:site_name" content="Caption – Start watching" />
           <meta property="fb:app_id" content="231104767338918" />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-89238300-1"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'UA-89238300-1');`
+            }}
+          />
         </Head>
 
         <body>
@@ -114,7 +127,7 @@ export default class MyDocument extends Document {
                 js = d.createElement(s); js.id = id;
                 js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=231104767338918';
                 fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));`,
+              }(document, 'script', 'facebook-jssdk'));`
             }}
           />
 
@@ -124,22 +137,9 @@ export default class MyDocument extends Document {
           <script
             async
             src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
+            charSet="utf-8"
           />
           <script async defer src="https://buttons.github.io/buttons.js" />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-89238300-1"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'UA-89238300-1');`,
-            }}
-          />
         </body>
       </html>
     );

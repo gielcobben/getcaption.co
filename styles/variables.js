@@ -1,6 +1,6 @@
 import css from "styled-jsx/css";
 
-export default css`
+export default css.global`
   :root {
     --content-width: 640px;
     --content-padding: 60px;

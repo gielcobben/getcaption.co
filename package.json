@@ -5,18 +5,19 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export && open ./out",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "now-build": "next build && next export -o dist"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gielcobben/getcaption.co/"
   },
-  "author": "Giel Cobben",
+  "author": "Giel Cobben <g.cobben@gmail.com>",
   "license": "MIT",
   "homepage": "http://getcaption.co/",
   "dependencies": {
-    "next": "^4.1.4",
+    "next": "^7.0.2",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
