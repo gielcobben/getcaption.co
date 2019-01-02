@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://getcaption.co/icon.png" height="64">
+  <img src="https://gielcobben.com/github/caption/icon_128x128.png" height="64">
   <h3 align="center">Caption Website</h3>
   <p align="center">Find the right subtitles. Easy.<p>
 </p>
@@ -15,10 +15,7 @@
 - `config.coffee` Configuration variables like page context function
 - `pages` The html pages including site structure.
 - `templates` The templates used in the html pages (for extend and include).
-- `assets`
-	- `static` Just static files like images, fonts and downloads.
-	- `css` CSS and SCSS files and dependents. The top level files get compiled.
-	- `scripts` javascript/coffeescript files and dependents. The top level files get compiled and minified.
+- `assets` - `static` Just static files like images, fonts and downloads. - `css` CSS and SCSS files and dependents. The top level files get compiled. - `scripts` javascript/coffeescript files and dependents. The top level files get compiled and minified.
 - `package.json` [npm information](https://docs.npmjs.com/files/package.json) about used javascript packages.
 - `.build` Path for the generated site (hidden by default).
 
