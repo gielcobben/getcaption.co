@@ -28,7 +28,7 @@ const Video = () => (
         margin: -157px 0 0 -160px;
         width: 320px;
         height: 314px;
-        background: url("/static/images/app.png");
+        background: url("/images/app.png");
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3),
           0 23px 38px 0 rgba(0, 0, 0, 0.43), 0 25px 65px 0 rgba(0, 0, 0, 0.1);
         border-radius: 5px;
@@ -36,7 +36,7 @@ const Video = () => (
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         div {
-          background: url("/static/images/app@2x.png");
+          background: url("/images/app@2x.png");
           background-size: 320px 314px;
         }
       }

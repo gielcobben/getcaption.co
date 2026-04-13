@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import Footer from "./Footer";
 import DownloadButton from "./DownloadButton";
 
@@ -45,143 +45,112 @@ const iconLinux = (
   </svg>
 );
 
-class Content extends React.Component {
-  constructor(props) {
-    super(props);
+export default function Content() {
+  const [platform, setPlatform] = useState(undefined);
+  const [systems, setSystems] = useState([
+    { name: "Mac", icon: iconMac, extension: "dmg", downloadLink: undefined },
+    { name: "Windows", icon: iconWindows, extension: "exe", downloadLink: undefined },
+    { name: "Linux", icon: iconLinux, extension: "deb", downloadLink: undefined },
+  ]);
 
-    this.state = {
-      platform: undefined,
-      systems: [
-        {
-          name: "Mac",
-          icon: iconMac,
-          extension: "dmg",
-          downloadLink: undefined,
-        },
-        {
-          name: "Windows",
-          icon: iconWindows,
-          extension: "exe",
-          downloadLink: undefined,
-        },
-        {
-          name: "Linux",
-          icon: iconLinux,
-          extension: "deb",
-          downloadLink: undefined,
-        },
-      ],
-    };
-  }
+  useEffect(() => {
+    setPlatform(getOS());
 
-  async componentDidMount() {
-    const { systems } = this.state;
+    async function fetchReleases() {
+      try {
+        const req = await fetch(
+          "https://api.github.com/repos/gielcobben/caption/releases"
+        );
+        const res = await req.json();
 
-    const req = await fetch(
-      "https://api.github.com/repos/gielcobben/caption/releases",
-    );
-    const res = await req.json();
+        const stables = res.filter((release) => !release.prerelease);
+        const latest = stables[0];
 
-    const stables = res.filter(release => {
-      return !release.prerelease;
-    });
-
-    const latest = stables[0];
-
-    latest.assets.map(asset => {
-      const extension = asset.name.substr(asset.name.lastIndexOf(".") + 1);
-      systems.map(system => {
-        if (system.extension === extension) {
-          system.downloadLink = asset.browser_download_url;
+        if (latest) {
+          const updatedSystems = systems.map((system) => {
+            const matchingAsset = latest.assets.find((asset) => {
+              const extension = asset.name.substr(asset.name.lastIndexOf(".") + 1);
+              return system.extension === extension;
+            });
+            return matchingAsset
+              ? { ...system, downloadLink: matchingAsset.browser_download_url }
+              : system;
+          });
+          setSystems(updatedSystems);
         }
-      });
-    });
-
-    this.setState({
-      platform: this.getOS(),
-      systems,
-    });
-  }
-
-  getOS = () => {
-    let os;
-    const platform = navigator.platform;
-    const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-    const macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
-
-    if (macosPlatforms.indexOf(platform) !== -1) {
-      os = "Mac";
-    } else if (windowsPlatforms.indexOf(platform) !== -1) {
-      os = "Windows";
-    } else if (!os && /Linux/.test(platform)) {
-      os = "Linux";
-    } else {
-      os = "Mac";
+      } catch (e) {
+        // GitHub API may be unavailable
+      }
     }
 
-    return os;
-  };
+    fetchReleases();
+  }, []);
 
-  render() {
-    const { systems, platform } = this.state;
+  function getOS() {
+    const p = navigator.platform;
+    const win = ["Win32", "Win64", "Windows", "WinCE"];
+    const mac = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"];
 
-    return (
-      <section>
-        <div>
-          <h1>Caption</h1>
-          <h2>Start Watching</h2>
-          <p>
-            Caption takes the effort out of finding and setting up the right
-            subtitles. A simple design, drag &amp; drop search, and automatic
-            downloading &amp; renaming let you just start watching. Caption is
-            multi-platform, open-source, and built entirely on web technology.
-          </p>
-          {platform && (
-            <DownloadButton currentSystemName={platform} systems={systems} />
-          )}
-        </div>
-
-        <Footer />
-
-        <style jsx>{`
-          section {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-            width: 50%;
-            height: 100vh;
-          }
-
-          @media (max-width: 800px) {
-            section {
-              padding: 0;
-              width: 100%;
-              height: calc(100% - 444px);
-              text-align: center;
-            }
-          }
-
-          @media (max-height: 800px) {
-            section {
-              overflow: auto;
-            }
-          }
-
-          div {
-            margin: auto;
-            padding: var(--content-padding);
-            max-width: var(--content-width);
-          }
-
-          p {
-            color: rgba(0, 0, 0, 0.6);
-          }
-        `}</style>
-      </section>
-    );
+    if (mac.indexOf(p) !== -1) return "Mac";
+    if (win.indexOf(p) !== -1) return "Windows";
+    if (/Linux/.test(p)) return "Linux";
+    return "Mac";
   }
-}
 
-export default Content;
+  return (
+    <section>
+      <div>
+        <h1>Caption</h1>
+        <h2>Start Watching</h2>
+        <p>
+          Caption takes the effort out of finding and setting up the right
+          subtitles. A simple design, drag &amp; drop search, and automatic
+          downloading &amp; renaming let you just start watching. Caption is
+          multi-platform, open-source, and built entirely on web technology.
+        </p>
+        {platform && (
+          <DownloadButton currentSystemName={platform} systems={systems} />
+        )}
+      </div>
+
+      <Footer />
+
+      <style jsx>{`
+        section {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 50%;
+          height: 100vh;
+        }
+
+        @media (max-width: 800px) {
+          section {
+            padding: 0;
+            width: 100%;
+            height: calc(100% - 444px);
+            text-align: center;
+          }
+        }
+
+        @media (max-height: 800px) {
+          section {
+            overflow: auto;
+          }
+        }
+
+        div {
+          margin: auto;
+          padding: var(--content-padding);
+          max-width: var(--content-width);
+        }
+
+        p {
+          color: rgba(0, 0, 0, 0.6);
+        }
+      `}</style>
+    </section>
+  );
+}

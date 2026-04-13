@@ -1,9 +1,7 @@
 import Metadata from "./Metadata";
-import Social from "./Social";
 
 const Footer = () => (
   <footer>
-    <Social />
     <Metadata />
 
     <style jsx>{`

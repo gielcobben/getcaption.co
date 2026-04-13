@@ -1,17 +1,15 @@
-import PropTypes from "prop-types";
-
-const Metadata = ({ version }) => (
+const Metadata = () => (
   <span>
     A product by{" "}
-    <a href="https://twitter.com/gielcobben" target="_blank">
+    <a href="https://twitter.com/gielcobben" target="_blank" rel="noopener noreferrer">
       Giel
     </a>{" "}
     &amp;{" "}
-    <a href="https://twitter.com/vernon_dg" target="_blank">
+    <a href="https://twitter.com/vernon_dg" target="_blank" rel="noopener noreferrer">
       Vernon
     </a>
     . Contribute on{" "}
-    <a href="https://github.com/gielcobben/Caption" target="_blank">
+    <a href="https://github.com/gielcobben/Caption" target="_blank" rel="noopener noreferrer">
       Github.
     </a>
     <style jsx>{`
@@ -23,9 +21,5 @@ const Metadata = ({ version }) => (
     `}</style>
   </span>
 );
-
-Metadata.PropTypes = {
-  version: PropTypes.string
-};
 
 export default Metadata;

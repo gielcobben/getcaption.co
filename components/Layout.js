@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import variables from "../styles/variables";
 import base from "../styles/base";
 
@@ -30,9 +29,5 @@ const Layout = ({ children }) => (
     `}</style>
   </main>
 );
-
-Layout.PropTypes = {
-  children: PropTypes.func.isRequired,
-};
 
 export default Layout;

@@ -4,10 +4,10 @@
   "description": "Website for Caption app",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "now-build": "next build && next export -o dist"
+    "deploy": "npx wrangler deploy"
   },
   "repository": {
     "type": "git",
@@ -15,11 +15,10 @@
   },
   "author": "Giel Cobben <g.cobben@gmail.com>",
   "license": "MIT",
-  "homepage": "http://getcaption.co/",
+  "homepage": "https://getcaption.co/",
   "dependencies": {
-    "next": "^7.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

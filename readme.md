@@ -6,27 +6,42 @@
 
 ## Get Caption (App)
 
-- **[Download the latest release](https://getcaption.co/)** (macOS only)
+- **[Download the latest release](https://getcaption.co/)** (macOS, Windows, Linux)
 - [Caption App Repository](https://github.com/gielcobben/Caption)
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Build
+
+```bash
+npm run build
+```
+
+Outputs a static site to the `out/` directory.
+
+## Deploy
+
+Deployed to Cloudflare Workers. Make sure you're authenticated with `npx wrangler login`, then:
+
+```bash
+npm run build
+npm run deploy
+```
 
 ## Project layout
 
-- `Makefile` Shorthands for commands to quickly build or install.
-- `config.coffee` Configuration variables like page context function
-- `pages` The html pages including site structure.
-- `templates` The templates used in the html pages (for extend and include).
-- `assets` - `static` Just static files like images, fonts and downloads. - `css` CSS and SCSS files and dependents. The top level files get compiled. - `scripts` javascript/coffeescript files and dependents. The top level files get compiled and minified.
-- `package.json` [npm information](https://docs.npmjs.com/files/package.json) about used javascript packages.
-- `.build` Path for the generated site (hidden by default).
-
-## Sprites
-
-Every folder within `assets/sprites` will be converted into a sprite package. This will result in an SCSS and image file. The SCSS file will end up in the _project_ folder with the same location as the images. So `assets/sprites/mainpage/*.png` will generate an SCSS file at `assets/sprites/mainpage.scss`. That way you can include it in your main SCSS file and everything will work.
-
-## Troubleshooting
-
-- You can update node with `brew update; brew upgrade node; npm update -g` (Mac only).
-- You can reset your npm packages with `rm -Rf ./node_modules`.
+- `pages/` Next.js pages (routes)
+- `components/` React components
+- `styles/` Global styles and CSS variables
+- `public/` Static assets (images, favicons)
+- `wrangler.jsonc` Cloudflare Workers configuration
 
 ## Related Repositories
 
