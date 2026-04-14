@@ -16,7 +16,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:5173](http://localhost:5173).
 
 ## Build
 
@@ -24,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 ```
 
-Outputs a static site to the `out/` directory.
+Outputs a static site to the `dist/` directory.
 
 ## Deploy
 
@@ -37,9 +37,11 @@ npm run deploy
 
 ## Project layout
 
-- `pages/` Next.js pages (routes)
-- `components/` React components
-- `styles/` Global styles and CSS variables
+- `src/` Application source code
+  - `components/` React components
+  - `index.css` Tailwind styles
+  - `main.jsx` Entry point
+  - `App.jsx` Root component
 - `public/` Static assets (images, favicons)
 - `wrangler.jsonc` Cloudflare Workers configuration
 

@@ -54,10 +54,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# Framwork files
-.next/
-.cache/
-out/
+# Build output
+dist/
 
 # Mac files
 .DS_Store
